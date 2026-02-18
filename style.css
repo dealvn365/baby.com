@@ -31,19 +31,37 @@ header{background:linear-gradient(135deg,#667eea,#764ba2);color:#fff;padding:28p
 .body{padding:14px;flex:1;display:flex;flex-direction:column;gap:8px}
 .platform-badge{display:inline-block;padding:6px 8px;border-radius:8px;font-size:12px;background:#f1f5ff;color:#334}
 .title{font-weight:600;font-size:16px}
-.price{font-weight:700;color:#e74c3c}
+.price{
+  font-weight:900;
+  font-size:26px;
+  line-height:1.1;
+  letter-spacing:-0.5px;
+  color:#e53935;   /* fallback */
+}
+
+@media (min-width: 768px){
+  .price{
+    font-size:30px;
+    background:linear-gradient(90deg,#ff4d4f,#ff7a45);
+    -webkit-background-clip:text;
+    -webkit-text-fill-color:transparent;
+  }
+}
+
+
 .actions{margin-top:auto;display:flex;gap:8px}
 .btn{flex:1;padding:10px;border-radius:10px;text-align:center;font-weight:600;text-decoration:none}
 .btn.buy{background:linear-gradient(90deg,#ff6b6b,#f94d6a);color:white}
 .btn.detail{background:#f4f6fb;color:#333;border:1px solid #edf0fb}
+
 .desc{
   white-space: pre-line;
-  line-height: 1.6;
+  line-height: 1.65;
   font-size: 14px;
   color: #333;
-
-  max-width: 100%;        /* 🔥 CHỐT 1 */
-  overflow-wrap: break-word; /* 🔥 CHỐT 2 */
+  max-width: 100%;
+  overflow-wrap: break-word;
+  word-break: break-word;     /* 🔥 desktop an tâm tuyệt đối */
 }
 
 
