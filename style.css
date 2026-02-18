@@ -37,10 +37,14 @@ header{background:linear-gradient(135deg,#667eea,#764ba2);color:#fff;padding:28p
 .btn.buy{background:linear-gradient(90deg,#ff6b6b,#f94d6a);color:white}
 .btn.detail{background:#f4f6fb;color:#333;border:1px solid #edf0fb}
 .desc{
-  white-space: pre-line;   /* 🔥 GIỮ NGUYÊN XUỐNG DÒNG */
+  white-space: pre-line;
   line-height: 1.6;
   font-size: 14px;
   color: #333;
+
+  max-width: 100%;        /* 🔥 CHỐT 1 */
+  overflow-wrap: break-word; /* 🔥 CHỐT 2 */
 }
+
 
 .footer-note{margin-top:30px;text-align:center;color:#667;font-size:13px;padding-bottom:30px}
