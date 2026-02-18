@@ -1,0 +1,166 @@
+<!doctype html><html lang="vi"><head>
+<meta charset="utf-8"><title>muasam.com</title>
+
+<link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+<link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+
+<meta name="theme-color" content="#667eea">
+<link rel="stylesheet" href="style.css"></head>
+<body><div class="container">
+<header><div class="header-inner">
+<div class="brand"><h1>muasam.com</h1></div>
+<div class="controls">
+<input id="searchBox" type="text" placeholder="🔍 Tìm sản phẩm...">
+<select id="platformFilter">
+<option value="all">Tất cả</option>
+<option value="Amazon">Amazon</option>
+<option value="Shopee">Shopee</option>
+<option value="Lazada">Lazada</option>
+<option value="TikTok">TikTok</option>
+</select>
+</div></div></header>
+<main id="product-list">
+<div class="product">
+  <div class="media"><img src="https://via.placeholder.com/400x300?text=No+Image" alt="Tên mới"></div>
+  <div class="body">
+    <span class="platform-badge">Amazon</span>
+    <div class="title">Tên mới</div>
+    <div class="price">Liên hệ</div>
+    <div class="actions">
+      <a class="btn detail" href="product_ten-moi.html">Xem chi tiết</a>
+      <a class="btn buy" href="https://" target="_blank">Mua ngay</a>
+    </div>
+  </div>
+</div>
+</main>
+<div class="footer-note">© 2026</div></div>
+<script>
+(function(){
+  const searchBox = document.getElementById('searchBox');
+  const platformFilter = document.getElementById('platformFilter');
+  const productCards = Array.from(document.querySelectorAll('.product'));
+
+  function normalizeText(text){
+    return text.toLowerCase()
+      .normalize("NFD")
+      .replace(/[̀-ͯ]/g, "");
+  }
+
+  function filterUI(){
+    const q = normalizeText(searchBox.value);
+    const pf = platformFilter.value;
+
+    productCards.forEach(card => {
+      const title = normalizeText(card.querySelector('.title').textContent);
+      const platform = card.querySelector('.platform-badge').textContent;
+      const ok = (pf==='all' || platform===pf) && title.includes(q);
+      card.style.display = ok ? 'flex' : 'none';
+    });
+  }
+
+// ===== Suggestion Box Style =====
+const suggestionBox = document.createElement('div');
+suggestionBox.style.position = 'absolute';
+suggestionBox.style.background = '#ffffff';
+suggestionBox.style.border = '1px solid #e5e7eb';
+suggestionBox.style.borderRadius = '8px';
+suggestionBox.style.width = searchBox.offsetWidth + 'px';
+suggestionBox.style.maxHeight = '220px';
+suggestionBox.style.overflowY = 'auto';
+suggestionBox.style.boxShadow = '0 8px 25px rgba(0,0,0,0.08)';
+suggestionBox.style.zIndex = '9999';
+suggestionBox.style.display = 'none';
+
+// 👇 QUAN TRỌNG
+searchBox.parentNode.style.position = 'relative';
+suggestionBox.style.top = searchBox.offsetHeight + 6 + 'px';
+suggestionBox.style.left = '0';
+
+searchBox.parentNode.appendChild(suggestionBox);
+
+
+function showSuggestions(){
+  const q = normalizeText(searchBox.value);
+  suggestionBox.innerHTML = '';
+
+  if(!q){
+    suggestionBox.style.display = 'none';
+    return;
+  }
+
+  const matches = productCards
+    .filter(card => {
+      const title = normalizeText(card.querySelector('.title').textContent);
+      return title.includes(q);
+    })
+    .slice(0,6);
+
+  if(matches.length === 0){
+    suggestionBox.style.display = 'none';
+    return;
+  }
+
+  matches.forEach(card => {
+    const title = card.querySelector('.title').textContent;
+    const img = card.querySelector('img')?.src || '';
+
+    const item = document.createElement('div');
+    item.style.display = 'flex';
+    item.style.alignItems = 'center';
+    item.style.padding = '8px 12px';
+    item.style.cursor = 'pointer';
+    item.style.gap = '10px';
+
+    item.addEventListener('mouseover', () => {
+      item.style.background = '#f3f4f6';
+    });
+    item.addEventListener('mouseout', () => {
+      item.style.background = '#ffffff';
+    });
+
+    item.addEventListener('click', () => {
+      searchBox.value = title;
+      suggestionBox.style.display = 'none';
+      filterUI();
+    });
+
+    // Ảnh
+    const imgEl = document.createElement('img');
+    imgEl.src = img;
+    imgEl.style.width = '40px';
+    imgEl.style.height = '40px';
+    imgEl.style.objectFit = 'cover';
+    imgEl.style.borderRadius = '6px';
+
+    // Text
+    const textEl = document.createElement('div');
+    textEl.textContent = title;
+    textEl.style.color = '#000';
+    textEl.style.fontSize = '14px';
+
+    item.appendChild(imgEl);
+    item.appendChild(textEl);
+
+    suggestionBox.appendChild(item);
+  });
+
+  suggestionBox.style.display = 'block';
+}
+
+
+  searchBox.addEventListener('input', () => {
+    filterUI();
+    showSuggestions();
+  });
+
+  platformFilter.addEventListener('change', filterUI);
+
+  document.addEventListener('click', (e) => {
+    if(!searchBox.contains(e.target)){
+      suggestionBox.style.display = 'none';
+    }
+  });
+
+})();
+</script></body></html>
