@@ -1,21 +1,61 @@
 <!doctype html><html lang="vi"><head>
 <meta charset="utf-8"><title>Bộ Thẻ FlashCard Theo Chủ Đề Học Tiếng Trung Kết Hợp English Tiếng Anh
 </title>
-<link rel="stylesheet" href="style.css"></head>
-<body><div class="container"><header><div class="header-inner">
+<link rel="stylesheet" href="style.css">
+
+<style>
+#backHomeBtn{
+  position:fixed;
+  right:18px;
+  bottom:18px;
+  width:52px;
+  height:52px;
+  border-radius:50%;
+  background:linear-gradient(135deg,#667eea,#764ba2);
+  color:#fff;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  text-decoration:none;
+  font-size:22px;
+  box-shadow:0 8px 25px rgba(0,0,0,.15);
+  opacity:0;
+  transform:translateY(20px);
+  transition:.25s;
+  z-index:9999;
+}
+#backHomeBtn.show{
+  opacity:1;
+  transform:translateY(0);
+}
+</style>
+
+</head>
+<body>
+
+<a href="index.html" id="backHomeBtn">🏠</a>
+
+<div class="container">
+<header>
+<div class="header-inner">
 <div class="brand"><h1>muasam.com</h1></div>
 <div class="controls"><a href="index.html" style="color:white">← Trang chủ</a></div>
-</div></header>
-<div class="product-detail"><div class="media"><img src="https://down-bs-vn.img.susercontent.com/vn-11134207-7ras8-m19oi1tbw8bg76.webp"></div>
-<div class="body"><span class="platform-badge">shopee</span>
+</div>
+</header>
+
+<div class="product-detail">
+<div class="media"><img src="https://down-bs-vn.img.susercontent.com/vn-11134207-7ras8-m19oi1tbw8bg76.webp"></div>
+
+<div class="body">
+<span class="platform-badge">shopee</span>
 <h2>Bộ Thẻ FlashCard Theo Chủ Đề Học Tiếng Trung Kết Hợp English Tiếng Anh
 </h2>
 <div class="price">50k - 43 lượt bán</div>
-<a class="buy-mini" href="https://s.shopee.vn/5fjOrMn6Tg" target="_blank">
-  🛒 Mua ngay
-</a>
+
+<a class="buy-mini" href="https://s.shopee.vn/5fjOrMn6Tg" target="_blank">🛒 Mua ngay</a>
+
 <div class="desc">
-  CHI TIẾT SẢN PHẨM
+CHI TIẾT SẢN PHẨM
 Danh Mục
 Shopee￼Nhà Sách Online￼Sổ và Giấy Các Loại￼Giấy Note
 Kho
@@ -84,8 +124,25 @@ Cam Kết：
 Hashtag:
 #votapviet #tapvietchuhan #tapviettiengtrung #hoctiengtrung #tiengtrung #chuhan #but #butbaymau #viet #vietbaymau #butnuoc #bútnước #thuphap #mựctựbaymàu #ngòibútbaymàu #tậpviết #butmathuat #butbaymuc #butmuc #bútmực #bútlông #butlong #viếtmực #vietmuc
 </div>
+
 <a class="btn buy" href="https://s.shopee.vn/5fjOrMn6Tg" target="_blank">Mua ngay</a>
 
+</div>
+</div>
 
-</div></div><div class="footer-note">© 2026</div></div>
+<div class="footer-note">© 2026</div>
+</div>
+
+<script>
+const backBtn = document.getElementById('backHomeBtn');
+
+window.addEventListener('scroll', () => {
+  if(window.scrollY > 250){
+    backBtn.classList.add('show');
+  }else{
+    backBtn.classList.remove('show');
+  }
+});
+</script>
+
 </body></html>
