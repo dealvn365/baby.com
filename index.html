@@ -64,6 +64,48 @@
   </div>
 </div>
 
+
+<div class="product">
+  <div class="media"><img src="https://via.placeholder.com/400x300?text=No+Image" alt="Tên mới"></div>
+  <div class="body">
+    <span class="platform-badge">Amazon</span>
+    <div class="title">Tên mới</div>
+    <div class="price">Liên hệ</div>
+    <div class="actions">
+      <a class="btn detail" href="product_ten-moi.html">Xem chi tiết</a>
+      <a class="btn buy" href="https://" target="_blank">Mua ngay</a>
+    </div>
+  </div>
+</div>
+
+
+<div class="product">
+  <div class="media"><img src="https://via.placeholder.com/400x300?text=No+Image" alt="Tên mới"></div>
+  <div class="body">
+    <span class="platform-badge">Amazon</span>
+    <div class="title">Tên mới</div>
+    <div class="price">Liên hệ</div>
+    <div class="actions">
+      <a class="btn detail" href="product_ten-moi.html">Xem chi tiết</a>
+      <a class="btn buy" href="https://" target="_blank">Mua ngay</a>
+    </div>
+  </div>
+</div>
+
+
+<div class="product">
+  <div class="media"><img src="https://via.placeholder.com/400x300?text=No+Image" alt="Tên mới"></div>
+  <div class="body">
+    <span class="platform-badge">Amazon</span>
+    <div class="title">Tên mới</div>
+    <div class="price">Liên hệ</div>
+    <div class="actions">
+      <a class="btn detail" href="product_ten-moi.html">Xem chi tiết</a>
+      <a class="btn buy" href="https://" target="_blank">Mua ngay</a>
+    </div>
+  </div>
+</div>
+
 </main>
 <div class="footer-note">© 2026</div></div>
 <script>
@@ -151,10 +193,18 @@ function showSuggestions(){
     });
 
     item.addEventListener('click', () => {
-      searchBox.value = title;
-      suggestionBox.style.display = 'none';
-      filterUI();
+    suggestionBox.style.display = 'none';
+
+    const link = card.querySelector('a')?.href;
+
+    if(link){                     // 🔥 PHẢI { 
+        window.location.href = link;
+    }else{                       // 🔥 PHẢI { 
+        card.click();
+    }
+
     });
+
 
     // Ảnh
     const imgEl = document.createElement('img');
