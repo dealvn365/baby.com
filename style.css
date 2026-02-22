@@ -39,6 +39,29 @@ header{background:linear-gradient(135deg,#667eea,#764ba2);color:#fff;padding:28p
   color:#e53935;   /* fallback */
 }
 
+.price-box{
+  display:flex;
+  align-items:center;
+  gap:10px;
+  margin:8px 0;
+}
+
+.original-price{
+  font-size:14px;
+  color:#9ca3af;
+  text-decoration:line-through;
+}
+
+.discount-badge{
+  background:#e53935;
+  color:#fff;
+  font-size:12px;
+  padding:4px 8px;
+  border-radius:6px;
+  font-weight:600;
+}
+
+
 @media (min-width: 768px){
   .price{
     font-size:30px;
