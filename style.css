@@ -139,7 +139,7 @@ header{background:linear-gradient(135deg,#667eea,#764ba2);color:#fff;padding:28p
   }
 
   .price{
-  font-size:24px;              /* to hơn nữa */
+  font-size:30px;              /* to hơn nữa */
   font-weight:900;
   color:#ee4d2d;
   letter-spacing:0.3px;        /* chữ thoáng hơn */
@@ -147,7 +147,7 @@ header{background:linear-gradient(135deg,#667eea,#764ba2);color:#fff;padding:28p
   }
 
   .original-price{
-    font-size:14px;
+    font-size:20px;
     opacity:0.65;
     text-decoration: line-through;
   }
