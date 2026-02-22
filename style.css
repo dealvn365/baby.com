@@ -1,7 +1,14 @@
 /* === muasam.com CSS === */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
 *{box-sizing:border-box}
-body{font-family:'Poppins',sans-serif;background:linear-gradient(180deg,#f6f8fb,#eef3fb);margin:0;color:#222}
+font-weight:700 !important;
+body{
+  font-family:'Poppins',sans-serif;
+  background:linear-gradient(180deg,#f6f8fb,#eef3fb);
+  margin:0;
+  color:#222;
+  font-weight:700;   /* 🔥 TOÀN BỘ CHỮ IN ĐẬM */
+}
 .container{max-width:1200px;margin:30px auto;padding:0 20px}
 header{background:linear-gradient(135deg,#667eea,#764ba2);color:#fff;padding:28px;border-radius:12px;box-shadow:0 6px 25px rgba(70,70,120,.12)}
 .header-inner{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap}
@@ -83,9 +90,17 @@ header{background:linear-gradient(135deg,#667eea,#764ba2);color:#fff;padding:28p
 }
 
 /* =========================
-   MOBILE APP STYLE (Shopee-like) - BIG TEXT
+   MOBILE APP STYLE (Shopee-like)
 ========================= */
 @media (max-width: 768px){
+
+  html{
+    font-size: 500%;
+  }
+
+  *{
+    font-size: 1rem !important;
+  }
 
   .container{
     margin:10px auto;
@@ -103,12 +118,12 @@ header{background:linear-gradient(135deg,#667eea,#764ba2);color:#fff;padding:28p
   }
 
   .product{
-    border-radius:14px;
+    border-radius:12px;
     box-shadow:0 4px 14px rgba(0,0,0,0.06);
   }
 
   .media{
-    aspect-ratio: 1 / 1;
+    aspect-ratio: 1 / 1;   /* 🔥 ẢNH VUÔNG như Shopee */
     background:#fff;
   }
 
@@ -117,65 +132,52 @@ header{background:linear-gradient(135deg,#667eea,#764ba2);color:#fff;padding:28p
   }
 
   .body{
-    padding:12px;
-    gap:8px;
+    padding:10px;
+    gap:6px;
   }
 
-  /* ===== BADGE ===== */
   .platform-badge{
-    font-size:12px;
-    padding:5px 8px;
-    font-weight:600;
+    font-size:10px;
+    padding:4px 6px;
   }
 
-  /* ===== TITLE TO HƠN ===== */
   .title{
-    font-size:16px;       /* 🔥 TĂNG */
-    font-weight:700;
-    line-height:1.45;
-    height:44px;          /* giữ 2 dòng */
+    font-size:13px;
+    font-weight:600;
+    line-height:1.4;
+    height:38px;          /* 🔥 cố định 2 dòng */
     overflow:hidden;
   }
 
   .price-box{
-    gap:8px;
-    align-items:flex-end;
+    gap:6px;
   }
 
-  /* ===== GIÁ MỚI CỰC TO ===== */
   .price{
-    font-size:36px;       /* 🔥 TO RÕ NHƯ APP */
-    font-weight:900;
-    color:#ee4d2d;
-    letter-spacing:0.5px;
-    line-height:1.1;
-  }
-
-  /* ===== GIÁ CŨ ===== */
-  .original-price{
     font-size:18px;
-    opacity:0.6;
-    text-decoration: line-through;
+    font-weight:800;
+    color:#ee4d2d;       /* 🔥 màu Shopee */
   }
 
-  /* ===== % GIẢM ===== */
+  .original-price{
+    font-size:11px;
+  }
+
   .discount-badge{
-    font-size:14px;        /* 🔥 TO HƠN */
-    padding:4px 8px;
-    border-radius:6px;
-    font-weight:700;
+    font-size:10px;
+    padding:2px 6px;
+    border-radius:4px;
   }
 
   .actions{
     flex-direction:column;
-    gap:8px;
+    gap:6px;
   }
 
   .btn{
-    font-size:14px;        /* 🔥 NÚT TO HƠN */
-    padding:10px;
-    border-radius:10px;
-    font-weight:600;
+    font-size:12px;
+    padding:8px;
+    border-radius:8px;
   }
 
   .btn.buy{
@@ -187,6 +189,27 @@ header{background:linear-gradient(135deg,#667eea,#764ba2);color:#fff;padding:28p
     border:0;
   }
 
+}
+
+/* =========================
+   FORCE MOBILE PREVIEW (PyQt)
+========================= */
+body.preview-mobile #product-list{
+  grid-template-columns: repeat(2, 1fr) !important;
+  gap:12px !important;
+}
+
+body.preview-mobile .media{
+  aspect-ratio: 1 / 1 !important;
+}
+
+body.preview-mobile .price{
+  font-size:18px !important;
+  color:#ee4d2d !important;
+}
+
+body.preview-mobile .title{
+  font-size:13px !important;
 }
 
 .actions{margin-top:auto;display:flex;gap:8px}
