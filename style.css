@@ -94,6 +94,10 @@ header{background:linear-gradient(135deg,#667eea,#764ba2);color:#fff;padding:28p
 ========================= */
 @media (max-width: 768px){
 
+  body{
+    background:red !important;
+  }
+  
   html{
     font-size:18px;   /* 🔥 tăng base font */
   }
