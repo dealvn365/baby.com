@@ -51,6 +51,14 @@ header{background:linear-gradient(135deg,#667eea,#764ba2);color:#fff;padding:28p
   font-size:14px;
   color:#9ca3af;
 }
+.discount-badge{
+  background:#e53935;
+  color:#fff;
+  font-size:12px;
+  padding:4px 8px;
+  border-radius:6px;
+  font-weight:600;
+}
 
 .original-price::after{
   content:"";
@@ -63,15 +71,99 @@ header{background:linear-gradient(135deg,#667eea,#764ba2);color:#fff;padding:28p
   transform:translateY(-50%);
 }
 
-@media (min-width: 768px){
-  .price{
-    font-size:30px;
-    background:linear-gradient(90deg,#ff4d4f,#ff7a45);
-    -webkit-background-clip:text;
-    -webkit-text-fill-color:transparent;
-  }
-}
+/* =========================
+   MOBILE APP STYLE (Shopee-like)
+========================= */
+@media (max-width: 768px){
 
+  .container{
+    margin:10px auto;
+    padding:0 10px;
+  }
+
+  header{
+    padding:16px;
+    border-radius:10px;
+  }
+
+  #product-list{
+    grid-template-columns: repeat(2, 1fr);
+    gap:12px;
+  }
+
+  .product{
+    border-radius:12px;
+    box-shadow:0 4px 14px rgba(0,0,0,0.06);
+  }
+
+  .media{
+    aspect-ratio: 1 / 1;   /* 🔥 ẢNH VUÔNG như Shopee */
+    background:#fff;
+  }
+
+  .media img{
+    object-fit:contain;
+  }
+
+  .body{
+    padding:10px;
+    gap:6px;
+  }
+
+  .platform-badge{
+    font-size:10px;
+    padding:4px 6px;
+  }
+
+  .title{
+    font-size:13px;
+    font-weight:600;
+    line-height:1.4;
+    height:38px;          /* 🔥 cố định 2 dòng */
+    overflow:hidden;
+  }
+
+  .price-box{
+    gap:6px;
+  }
+
+  .price{
+    font-size:18px;
+    font-weight:800;
+    color:#ee4d2d;       /* 🔥 màu Shopee */
+  }
+
+  .original-price{
+    font-size:11px;
+  }
+
+  .discount-badge{
+    font-size:10px;
+    padding:2px 6px;
+    border-radius:4px;
+  }
+
+  .actions{
+    flex-direction:column;
+    gap:6px;
+  }
+
+  .btn{
+    font-size:12px;
+    padding:8px;
+    border-radius:8px;
+  }
+
+  .btn.buy{
+    background:#ee4d2d;
+  }
+
+  .btn.detail{
+    background:#f5f5f5;
+    border:0;
+  }
+
+}
 
 .actions{margin-top:auto;display:flex;gap:8px}
 .btn{flex:1;padding:10px;border-radius:10px;text-align:center;font-weight:600;text-decoration:none}
