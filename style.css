@@ -139,13 +139,17 @@ header{background:linear-gradient(135deg,#667eea,#764ba2);color:#fff;padding:28p
   }
 
   .price{
-    font-size:18px;
-    font-weight:800;
-    color:#ee4d2d;       /* 🔥 màu Shopee */
+  font-size:24px;              /* to hơn nữa */
+  font-weight:900;
+  color:#ee4d2d;
+  letter-spacing:0.3px;        /* chữ thoáng hơn */
+  line-height:1.2;
   }
 
   .original-price{
-    font-size:11px;
+    font-size:14px;
+    opacity:0.65;
+    text-decoration: line-through;
   }
 
   .discount-badge{
