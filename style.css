@@ -83,7 +83,7 @@ header{background:linear-gradient(135deg,#667eea,#764ba2);color:#fff;padding:28p
 }
 
 /* =========================
-   MOBILE APP STYLE (Shopee-like)
+   MOBILE APP STYLE (Shopee-like) - BIG TEXT
 ========================= */
 @media (max-width: 768px){
 
@@ -103,12 +103,12 @@ header{background:linear-gradient(135deg,#667eea,#764ba2);color:#fff;padding:28p
   }
 
   .product{
-    border-radius:12px;
+    border-radius:14px;
     box-shadow:0 4px 14px rgba(0,0,0,0.06);
   }
 
   .media{
-    aspect-ratio: 1 / 1;   /* 🔥 ẢNH VUÔNG như Shopee */
+    aspect-ratio: 1 / 1;
     background:#fff;
   }
 
@@ -117,56 +117,65 @@ header{background:linear-gradient(135deg,#667eea,#764ba2);color:#fff;padding:28p
   }
 
   .body{
-    padding:10px;
-    gap:6px;
+    padding:12px;
+    gap:8px;
   }
 
+  /* ===== BADGE ===== */
   .platform-badge{
-    font-size:10px;
-    padding:4px 6px;
+    font-size:12px;
+    padding:5px 8px;
+    font-weight:600;
   }
 
+  /* ===== TITLE TO HƠN ===== */
   .title{
-    font-size:13px;
-    font-weight:600;
-    line-height:1.4;
-    height:38px;          /* 🔥 cố định 2 dòng */
+    font-size:16px;       /* 🔥 TĂNG */
+    font-weight:700;
+    line-height:1.45;
+    height:44px;          /* giữ 2 dòng */
     overflow:hidden;
   }
 
   .price-box{
-    gap:6px;
+    gap:8px;
+    align-items:flex-end;
   }
 
+  /* ===== GIÁ MỚI CỰC TO ===== */
   .price{
-  font-size:30px;              /* to hơn nữa */
-  font-weight:900;
-  color:#ee4d2d;
-  letter-spacing:0.3px;        /* chữ thoáng hơn */
-  line-height:1.2;
+    font-size:36px;       /* 🔥 TO RÕ NHƯ APP */
+    font-weight:900;
+    color:#ee4d2d;
+    letter-spacing:0.5px;
+    line-height:1.1;
   }
 
+  /* ===== GIÁ CŨ ===== */
   .original-price{
-    font-size:20px;
-    opacity:0.65;
+    font-size:18px;
+    opacity:0.6;
     text-decoration: line-through;
   }
 
+  /* ===== % GIẢM ===== */
   .discount-badge{
-    font-size:10px;
-    padding:2px 6px;
-    border-radius:4px;
+    font-size:14px;        /* 🔥 TO HƠN */
+    padding:4px 8px;
+    border-radius:6px;
+    font-weight:700;
   }
 
   .actions{
     flex-direction:column;
-    gap:6px;
+    gap:8px;
   }
 
   .btn{
-    font-size:12px;
-    padding:8px;
-    border-radius:8px;
+    font-size:14px;        /* 🔥 NÚT TO HƠN */
+    padding:10px;
+    border-radius:10px;
+    font-weight:600;
   }
 
   .btn.buy{
