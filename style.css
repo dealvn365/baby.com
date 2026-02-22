@@ -47,20 +47,21 @@ header{background:linear-gradient(135deg,#667eea,#764ba2);color:#fff;padding:28p
 }
 
 .original-price{
+  position:relative;
   font-size:14px;
   color:#9ca3af;
-  text-decoration:line-through;
 }
 
-.discount-badge{
-  background:#e53935;
-  color:#fff;
-  font-size:12px;
-  padding:4px 8px;
-  border-radius:6px;
-  font-weight:600;
+.original-price::after{
+  content:"";
+  position:absolute;
+  left:0;
+  right:0;
+  top:50%;
+  height:1.5px;
+  background:#9ca3af;
+  transform:translateY(-50%);
 }
-
 
 @media (min-width: 768px){
   .price{
