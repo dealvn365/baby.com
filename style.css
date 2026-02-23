@@ -1,22 +1,24 @@
 /* === muasam.com CSS === */
 @import url('https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;600;700;800;900&display=swap');
 
-body{
-  font-family:'Be Vietnam Pro', sans-serif;
-}
-
-
+/* Reset cơ bản */
 *{
   box-sizing:border-box;
-  font-weight:700;
-}
-body{
-  font-family:'Poppins',sans-serif;
-  background:linear-gradient(180deg,#f6f8fb,#eef3fb);
   margin:0;
-  color:#222;
-  font-weight:700;   /* 🔥 TOÀN BỘ CHỮ IN ĐẬM */
+  padding:0;
 }
+
+/* Body chính */
+body{
+  font-family:'Be Vietnam Pro', sans-serif;
+  background:linear-gradient(180deg,#f6f8fb,#eef3fb);
+  color:#222;
+  font-weight:700;   /* 🔥 toàn bộ chữ đậm */
+  line-height:1.6;
+}
+
+
+
 .container{max-width:1200px;margin:30px auto;padding:0 20px}
 header{background:linear-gradient(135deg,#667eea,#764ba2);color:#fff;padding:28px;border-radius:12px;box-shadow:0 6px 25px rgba(70,70,120,.12)}
 .header-inner{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap}
@@ -174,7 +176,7 @@ header{background:linear-gradient(135deg,#667eea,#764ba2);color:#fff;padding:28p
   }
 
   .original-price{
-    font-size:1rem;        /* 🔥 tăng lên */
+    font-size:1.5rem;        /* 🔥 tăng lên */
     font-weight:600;
     opacity:0.85;          /* bớt mờ */
     text-decoration:line-through;
