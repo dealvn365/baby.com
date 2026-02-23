@@ -101,92 +101,6 @@ header{background:linear-gradient(135deg,#667eea,#764ba2);color:#fff;padding:28p
 
 
 
-@media (max-width: 768px){
-
-  /* GỐC AUTO SCALE */
-  html{
-    font-size: clamp(18px, 4.5vw, 26px);
-    /* min 18px – max 26px */
-  }
-
-  /* TOÀN BỘ CHỮ TO LÊN */
-  body{
-    font-size: 1.4rem;
-    line-height: 1.65;
-  }
-
-  /* TIÊU ĐỀ */
-  .title{
-    font-size: 1.6rem;
-    font-weight: 800;
-  }
-
-  /* GIÁ SALE – SIÊU TO */
-  .price{
-    font-size: 2.6rem;
-    font-weight: 900;
-    color:#ee4d2d;
-    letter-spacing:-0.5px;
-  }
-
-  /* % GIẢM GIÁ – NỔI */
-  .discount-badge{
-    font-size: 1.4rem;
-    padding: 8px 14px;
-    border-radius: 999px;
-    font-weight: 900;
-  }
-
-  /* NÚT BẤM */
-  .btn{
-    font-size: 1.4rem;
-    padding: 16px;
-    border-radius: 14px;
-    font-weight: 800;
-  }
-
-  /* GIÁ GỐC */
-  .original-price{
-    font-size: 1.2rem;
-  }
-}
-
-
-/* =========================
-   FORCE MOBILE PREVIEW (PyQt)
-========================= */
-body.preview-mobile{
-  background:#f5f5f5 !important;
-}
-
-body.preview-mobile #product-list{
-  grid-template-columns: repeat(2, 1fr) !important;
-  gap:10px !important;
-}
-
-body.preview-mobile .media{
-  aspect-ratio:1/1 !important;
-}
-
-body.preview-mobile .title{
-  font-size:14px !important;
-}
-
-body.preview-mobile .price{
-  font-size:40px !important;     /* 🔥 TO NHƯ APP */
-  font-weight:900 !important;
-  color:#ee4d2d !important;
-}
-
-body.preview-mobile .original-price{
-  font-size:25px !important;
-}
-
-body.preview-mobile .discount-badge{
-  font-size:30px !important;
-}
-
-
 /* =========================
    BUTTON BASE
 ========================= */
@@ -228,5 +142,59 @@ body.preview-mobile .discount-badge{
   overflow-wrap:break-word;
   word-break:break-word;
 }
+
+/* =========================
+   MOBILE – TOÀN BỘ CHỮ SIÊU TO
+========================= */
+@media (max-width: 768px){
+
+  /* GỐC SCALE – QUYẾT ĐỊNH TẤT CẢ */
+  html{
+    font-size: 26px;   /* 🔥 tăng lên 28–30px nếu muốn to hơn nữa */
+  }
+
+  body{
+    font-size: 1.4rem;
+    line-height: 1.65;
+  }
+
+  /* TÊN SẢN PHẨM */
+  .title{
+    font-size: 1.6rem;
+    font-weight: 800;
+  }
+
+  /* GIÁ – SIÊU TO */
+  .price{
+    font-size: 2.6rem;
+    font-weight: 900;
+    color:#ee4d2d;
+  }
+
+  /* GIÁ GỐC */
+  .original-price{
+    font-size: 1.3rem;
+  }
+
+  /* % GIẢM GIÁ */
+  .discount-badge{
+    font-size: 1.3rem;
+    padding: 8px 14px;
+    border-radius: 999px;
+    font-weight: 900;
+  }
+
+  /* NÚT BẤM */
+  .btn{
+    font-size: 1.4rem;
+    padding: 16px;
+    border-radius: 14px;
+    font-weight: 800;
+  }
+
+}
+
+
+
 
 .footer-note{margin-top:30px;text-align:center;color:#667;font-size:13px;padding-bottom:30px}
