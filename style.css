@@ -105,7 +105,7 @@ header{background:linear-gradient(135deg,#667eea,#764ba2);color:#fff;padding:28p
 @media (max-width: 768px){
 
   html{
-    font-size:40px;   /* cân bằng, 22px hơi quá to */
+    font-size:80px;   /* cân bằng, 22px hơi quá to */
   }
 
   body{
