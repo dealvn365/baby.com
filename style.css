@@ -176,10 +176,10 @@ header{background:linear-gradient(135deg,#667eea,#764ba2);color:#fff;padding:28p
   }
 
   .original-price{
-    font-size:1.5rem;        /* 🔥 tăng lên */
-    font-weight:600;
-    opacity:0.85;          /* bớt mờ */
-    text-decoration:line-through;
+      font-size:1.5rem;
+      font-weight:600;
+      color:#e53935;          /* đỏ rõ */
+      text-decoration:line-through;
   }
 
   .discount-badge{
