@@ -58,7 +58,7 @@ header{background:linear-gradient(135deg,#667eea,#764ba2);color:#fff;padding:28p
 
 .body{padding:14px;flex:1;display:flex;flex-direction:column;gap:8px}
 .platform-badge{display:inline-block;padding:6px 8px;border-radius:8px;font-size:12px;background:#f1f5ff;color:#334}
-.title{font-weight:600;font-size:16px}
+.title{font-weight:600;font-size:25px}
 .price{
   font-weight:900;
   font-size:26px;
@@ -69,25 +69,31 @@ header{background:linear-gradient(135deg,#667eea,#764ba2);color:#fff;padding:28p
 
 .price-box{
   display:flex;
-  align-items:center;
-  gap:10px;
+  flex-direction:column;   /* 🔥 QUAN TRỌNG */
+  align-items:flex-start;
+  gap:4px;
   margin:8px 0;
 }
 
 .original-price{
   position:relative;
-  font-size:13px;
+  font-size:24px;          /* nhỏ hơn giá mới */
   color:#9ca3af;
+  font-weight:500;
 }
 
+
 .discount-badge{
-  background:#e53935;
+  background:#ee4d2d;        /* đỏ Shopee */
   color:#fff;
-  font-size:12px;
-  padding:4px 8px;
-  border-radius:6px;
-  font-weight:600;
+  font-size:20px;            /* 🔥 chữ % TO */
+  padding:10px 14px;          /* 🔥 nền TO */
+  border-radius:8px;
+  font-weight:900;
+  line-height:1;
+  white-space:nowrap;
 }
+
 .original-price::after{
   content:"";
   position:absolute;
@@ -143,62 +149,5 @@ header{background:linear-gradient(135deg,#667eea,#764ba2);color:#fff;padding:28p
   word-break:break-word;
 }
 
-/* =========================
-   SHOPEE STYLE – WEB MOBILE
-========================= */
-@media (max-width: 768px){
-
-  body{
-    font-size:26px;              /* 👈 nền chữ */
-    line-height:1.6;
-  }
-
-  .container{
-    max-width:100% !important;
-    padding:0 12px;
-    margin:0 auto;
-  }
-
-  /* TÊN SẢN PHẨM */
-  .title{
-    font-size:30px !important;
-    font-weight:800 !important;
-    line-height:1.35;
-  }
-
-  /* GIÁ */
-  .price{
-    font-size:32px !important;
-    font-weight:900 !important;
-    color:#ee4d2d !important;
-    line-height:1;
-  }
-
-  /* GIÁ GỐC */
-  .original-price{
-    font-size:25px !important;
-  }
-
-  /* % GIẢM */
-  .discount-badge{
-    font-size:25px !important;
-    padding:6px 12px;
-    font-weight:900;
-  }
-
-  /* NÚT */
-  .btn{
-    font-size:25px !important;
-    padding:14px 16px;
-    border-radius:12px;
-    font-weight:800;
-  }
-
-  /* BADGE */
-  .platform-badge{
-    font-size:20px;
-    padding:6px 10px;
-  }
-}
 
 .footer-note{margin-top:30px;text-align:center;color:#667;font-size:13px;padding-bottom:30px}
