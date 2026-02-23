@@ -99,33 +99,55 @@ header{background:linear-gradient(135deg,#667eea,#764ba2);color:#fff;padding:28p
   transform:translateY(-50%);
 }
 
-// mobile web
+
+
 @media (max-width: 768px){
 
-  html{ font-size:24px; }
+  /* GỐC AUTO SCALE */
+  html{
+    font-size: clamp(18px, 4.5vw, 26px);
+    /* min 18px – max 26px */
+  }
 
+  /* TOÀN BỘ CHỮ TO LÊN */
   body{
-    font-size:1.4rem;
-    line-height:1.65;
+    font-size: 1.4rem;
+    line-height: 1.65;
   }
 
-  .title{ font-size:1.6rem; }
+  /* TIÊU ĐỀ */
+  .title{
+    font-size: 1.6rem;
+    font-weight: 800;
+  }
 
+  /* GIÁ SALE – SIÊU TO */
   .price{
-    font-size:2.6rem;
-    font-weight:900;
+    font-size: 2.6rem;
+    font-weight: 900;
+    color:#ee4d2d;
+    letter-spacing:-0.5px;
   }
 
+  /* % GIẢM GIÁ – NỔI */
   .discount-badge{
-    font-size:1.4rem;
-    padding:8px 14px;
-    border-radius:999px;
+    font-size: 1.4rem;
+    padding: 8px 14px;
+    border-radius: 999px;
+    font-weight: 900;
   }
 
+  /* NÚT BẤM */
   .btn{
-    font-size:1.4rem;
-    padding:16px;
-    border-radius:14px;
+    font-size: 1.4rem;
+    padding: 16px;
+    border-radius: 14px;
+    font-weight: 800;
+  }
+
+  /* GIÁ GỐC */
+  .original-price{
+    font-size: 1.2rem;
   }
 }
 
