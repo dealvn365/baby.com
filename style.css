@@ -103,7 +103,7 @@ header{background:linear-gradient(135deg,#667eea,#764ba2);color:#fff;padding:28p
 @media (max-width: 768px){
 
   html{
-    font-size:20px;   /* cân bằng, 22px hơi quá to */
+    font-size:40px;   /* cân bằng, 22px hơi quá to */
   }
 
   body{
@@ -222,7 +222,7 @@ body.preview-mobile .title{
 }
 
 body.preview-mobile .price{
-  font-size:22px !important;     /* 🔥 TO NHƯ APP */
+  font-size:40px !important;     /* 🔥 TO NHƯ APP */
   font-weight:900 !important;
   color:#ee4d2d !important;
 }
