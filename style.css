@@ -149,7 +149,7 @@ header{background:linear-gradient(135deg,#667eea,#764ba2);color:#fff;padding:28p
 @media (max-width: 768px){
 
   body{
-    font-size:18px;              /* 👈 nền chữ */
+    font-size:26px;              /* 👈 nền chữ */
     line-height:1.6;
   }
 
@@ -161,7 +161,7 @@ header{background:linear-gradient(135deg,#667eea,#764ba2);color:#fff;padding:28p
 
   /* TÊN SẢN PHẨM */
   .title{
-    font-size:20px !important;
+    font-size:30px !important;
     font-weight:800 !important;
     line-height:1.35;
   }
@@ -176,19 +176,19 @@ header{background:linear-gradient(135deg,#667eea,#764ba2);color:#fff;padding:28p
 
   /* GIÁ GỐC */
   .original-price{
-    font-size:18px !important;
+    font-size:25px !important;
   }
 
   /* % GIẢM */
   .discount-badge{
-    font-size:18px !important;
+    font-size:25px !important;
     padding:6px 12px;
     font-weight:900;
   }
 
   /* NÚT */
   .btn{
-    font-size:18px !important;
+    font-size:25px !important;
     padding:14px 16px;
     border-radius:12px;
     font-weight:800;
@@ -196,7 +196,7 @@ header{background:linear-gradient(135deg,#667eea,#764ba2);color:#fff;padding:28p
 
   /* BADGE */
   .platform-badge{
-    font-size:14px;
+    font-size:20px;
     padding:6px 10px;
   }
 }
