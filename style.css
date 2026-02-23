@@ -150,7 +150,7 @@ header{background:linear-gradient(135deg,#667eea,#764ba2);color:#fff;padding:28p
 
   /* GỐC SCALE – QUYẾT ĐỊNH TẤT CẢ */
   html{
-    font-size: 26px;   /* 🔥 tăng lên 28–30px nếu muốn to hơn nữa */
+    font-size: 60px;   /* 🔥 tăng lên 28–30px nếu muốn to hơn nữa */
   }
 
   body{
