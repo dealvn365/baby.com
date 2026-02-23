@@ -76,9 +76,10 @@ header{background:linear-gradient(135deg,#667eea,#764ba2);color:#fff;padding:28p
 
 .original-price{
   position:relative;
-  font-size:14px;
+  font-size:13px;
   color:#9ca3af;
 }
+
 .discount-badge{
   background:#e53935;
   color:#fff;
@@ -87,7 +88,6 @@ header{background:linear-gradient(135deg,#667eea,#764ba2);color:#fff;padding:28p
   border-radius:6px;
   font-weight:600;
 }
-
 .original-price::after{
   content:"";
   position:absolute;
@@ -175,13 +175,6 @@ header{background:linear-gradient(135deg,#667eea,#764ba2);color:#fff;padding:28p
     letter-spacing:-0.5px;
   }
 
-  .original-price{
-      font-size:1.5rem;
-      font-weight:600;
-      color:#e53935;          /* đỏ rõ */
-      text-decoration:line-through;
-  }
-
   .discount-badge{
     font-size:0.75rem;
     padding:4px 8px;
@@ -230,11 +223,11 @@ body.preview-mobile .price{
 }
 
 body.preview-mobile .original-price{
-  font-size:12px !important;
+  font-size:25px !important;
 }
 
 body.preview-mobile .discount-badge{
-  font-size:11px !important;
+  font-size:30px !important;
 }
 
 
