@@ -143,56 +143,62 @@ header{background:linear-gradient(135deg,#667eea,#764ba2);color:#fff;padding:28p
   word-break:break-word;
 }
 
-
-
-
-
-
 /* =========================
-   FORCE MOBILE PREVIEW – PYQT FIX
+   SHOPEE STYLE – WEB MOBILE
 ========================= */
-body.preview-mobile{
-  font-size: 28px !important;
-  line-height: 1.7;
+@media (max-width: 768px){
+
+  body{
+    font-size:18px;              /* 👈 nền chữ */
+    line-height:1.6;
+  }
+
+  .container{
+    max-width:100% !important;
+    padding:0 12px;
+    margin:0 auto;
+  }
+
+  /* TÊN SẢN PHẨM */
+  .title{
+    font-size:20px !important;
+    font-weight:800 !important;
+    line-height:1.35;
+  }
+
+  /* GIÁ */
+  .price{
+    font-size:32px !important;
+    font-weight:900 !important;
+    color:#ee4d2d !important;
+    line-height:1;
+  }
+
+  /* GIÁ GỐC */
+  .original-price{
+    font-size:18px !important;
+  }
+
+  /* % GIẢM */
+  .discount-badge{
+    font-size:18px !important;
+    padding:6px 12px;
+    font-weight:900;
+  }
+
+  /* NÚT */
+  .btn{
+    font-size:18px !important;
+    padding:14px 16px;
+    border-radius:12px;
+    font-weight:800;
+  }
+
+  /* BADGE */
+  .platform-badge{
+    font-size:14px;
+    padding:6px 10px;
+  }
 }
-
-/* TOÀN BỘ CHỮ */
-body.preview-mobile *{
-  font-size: 1.2em !important;
-}
-
-/* TÊN SP */
-body.preview-mobile .title{
-  font-size: 2.2em !important;
-  font-weight: 900;
-}
-
-/* GIÁ */
-body.preview-mobile .price{
-  font-size: 3.2em !important;
-  font-weight: 900;
-  color:#ee4d2d;
-}
-
-/* GIÁ GỐC */
-body.preview-mobile .original-price{
-  font-size: 1.6em !important;
-}
-
-/* % GIẢM */
-body.preview-mobile .discount-badge{
-  font-size: 1.6em !important;
-  padding: 10px 18px;
-  font-weight: 900;
-}
-
-/* NÚT */
-body.preview-mobile .btn{
-  font-size: 1.6em !important;
-  padding: 18px;
-  border-radius: 16px;
-}
-
-
 
 .footer-note{margin-top:30px;text-align:center;color:#667;font-size:13px;padding-bottom:30px}
