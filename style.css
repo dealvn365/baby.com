@@ -1,24 +1,7 @@
 /* === muasam.com CSS === */
-@import url('https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;600;700;800;900&display=swap');
-
-/* Reset cơ bản */
-*{
-  box-sizing:border-box;
-  margin:0;
-  padding:0;
-}
-
-/* Body chính */
-body{
-  font-family:'Be Vietnam Pro', sans-serif;
-  background:linear-gradient(180deg,#f6f8fb,#eef3fb);
-  color:#222;
-  font-weight:700;   /* 🔥 toàn bộ chữ đậm */
-  line-height:1.6;
-}
-
-
-
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+*{box-sizing:border-box}
+body{font-family:'Poppins',sans-serif;background:linear-gradient(180deg,#f6f8fb,#eef3fb);margin:0;color:#222}
 .container{max-width:1200px;margin:30px auto;padding:0 20px}
 header{background:linear-gradient(135deg,#667eea,#764ba2);color:#fff;padding:28px;border-radius:12px;box-shadow:0 6px 25px rgba(70,70,120,.12)}
 .header-inner{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap}
@@ -26,18 +9,7 @@ header{background:linear-gradient(135deg,#667eea,#764ba2);color:#fff;padding:28p
 .controls{display:flex;gap:10px;align-items:center}
 .controls input{padding:10px 12px;border-radius:10px;border:0;min-width:220px}
 .controls select{padding:10px 12px;border-radius:10px;border:0}
-#product-list{
-  display:grid;
-  grid-template-columns: repeat(2, 1fr);   /* 🔥 LUÔN 2 CỘT */
-  gap:20px;
-  margin-top:24px;
-}
-
-@media (min-width: 992px){
-  #product-list{
-    grid-template-columns: repeat(4, 1fr);
-  }
-}
+#product-list{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:20px;margin-top:24px}
 .product{background:#fff;border-radius:14px;overflow:hidden;box-shadow:0 6px 20px rgba(40,40,80,.06);transition:.2s;display:flex;flex-direction:column}
 .product:hover{transform:translateY(-6px);box-shadow:0 14px 30px rgba(40,40,80,.1)}
 .media{
@@ -67,229 +39,30 @@ header{background:linear-gradient(135deg,#667eea,#764ba2);color:#fff;padding:28p
   color:#e53935;   /* fallback */
 }
 
-.price-box{
-  display:flex;
-  flex-direction:column;   /* 🔥 QUAN TRỌNG */
-  align-items:flex-start;
-  gap:4px;
-  margin:8px 0;
-}
-
-.original-price{
-  position:relative;
-  font-size:24px;          /* nhỏ hơn giá mới */
-  color:#9ca3af;
-  font-weight:500;
-}
-
-
-.discount-badge{
-  background:#ee4d2d;        /* đỏ Shopee */
-  color:#fff;
-  font-size:20px;            /* 🔥 chữ % TO */
-  padding:10px 14px;          /* 🔥 nền TO */
-  border-radius:8px;
-  font-weight:900;
-  line-height:1;
-  white-space:nowrap;
-}
-
-.original-price::after{
-  content:"";
-  position:absolute;
-  left:0;
-  right:0;
-  top:50%;
-  height:1.5px;
-  background:#9ca3af;
-  transform:translateY(-50%);
-}
-
-/* =========================
-   BUTTON BASE
-========================= */
-.actions{
-  margin-top:auto;
-  display:flex;
-  gap:8px;
-}
-
-.btn{
-  flex:1;
-  text-align:center;
-  font-weight:600;
-  text-decoration:none;
-  transition:0.2s;
-}
-
-.btn.buy{
-  background:linear-gradient(90deg,#ff6b6b,#f94d6a);
-  color:white;
-}
-
-.btn.detail{
-  background:#f4f6fb;
-  color:#333;
-  border:1px solid #edf0fb;
-}
-
-
-/* =========================
-   DESCRIPTION SAFE STYLE
-========================= */
-.desc{
-  white-space:pre-line;
-  line-height:1.65;
-  font-size:14px;
-  color:#333;
-  max-width:100%;
-  overflow-wrap:break-word;
-  word-break:break-word;
-}
-
-
-
-/* =========================
-   MOBILE – SHOPEE STYLE (FIX ZOOM)
-========================= */
-@media (max-width: 768px){
-  html{
-    font-size:16px;
-  }
-
-  body{
-    font-size:14px;
-    line-height:1.4;
-  }
-
-  .container{
-    margin:8px auto;
-    padding:0 10px;
-  }
-
-  header{
-    padding:12px 10px;
-    border-radius:12px;
-  }
-
-  #product-list{
-    grid-template-columns: repeat(2, 1fr);
-    gap:8px;
-  }
-
-  .product{
-    border-radius:12px;
-    box-shadow:0 2px 8px rgba(0,0,0,0.06);
-  }
-
-  .media{
-    aspect-ratio:1/1;
-  }
-
-  .body{
-    padding:8px;
-    gap:6px;
-  }
-
-  .platform-badge{
-    font-size:10px;
-    padding:3px 6px;
-    border-radius:4px;
-  }
-
-  .title{
-    font-size:13px;
-    font-weight:600;
-    line-height:1.35;
-
-    display:-webkit-box;
-    -webkit-line-clamp:2;
-    -webkit-box-orient:vertical;
-    overflow:hidden;
-    min-height:2.6em;
-  }
-
-  .sold{
-    font-size:11px;
-    color:#6b7280;
-  }
-
+@media (min-width: 768px){
   .price{
-    font-size:18px;          /* 🔥 to vừa – giống Shopee */
-    font-weight:800;
-    color:#ee4d2d;
-    line-height:1.1;
-  }
-
-  .original-price{
-    font-size:11px;
-  }
-
-  .discount-badge{
-    font-size:11px;
-    padding:2px 6px;
-    border-radius:10px;
-  }
-
-  .btn{
-    font-size:13px;
-    padding:8px;
-    border-radius:8px;
-  }
-
-  .footer-note{
-    font-size:11px;
+    font-size:30px;
+    background:linear-gradient(90deg,#ff4d4f,#ff7a45);
+    -webkit-background-clip:text;
+    -webkit-text-fill-color:transparent;
   }
 }
 
-/* =========================
-   FORCE MOBILE PREVIEW (PyQt) – SHOPEE WEB STYLE
-========================= */
-body.preview-mobile{
-  background:#f5f5f5 !important;
+
+.actions{margin-top:auto;display:flex;gap:8px}
+.btn{flex:1;padding:10px;border-radius:10px;text-align:center;font-weight:600;text-decoration:none}
+.btn.buy{background:linear-gradient(90deg,#ff6b6b,#f94d6a);color:white}
+.btn.detail{background:#f4f6fb;color:#333;border:1px solid #edf0fb}
+
+.desc{
+  white-space: pre-line;
+  line-height: 1.65;
+  font-size: 14px;
+  color: #333;
+  max-width: 100%;
+  overflow-wrap: break-word;
+  word-break: break-word;     /* 🔥 desktop an tâm tuyệt đối */
 }
 
-/* layout 2 cột */
-body.preview-mobile #product-list{
-  grid-template-columns: repeat(2, 1fr) !important;
-  gap:8px !important;
-}
-
-/* ảnh vuông */
-body.preview-mobile .media{
-  aspect-ratio:1/1 !important;
-}
-
-/* tên sản phẩm – nhỏ gọn như Shopee */
-body.preview-mobile .title{
-  font-size:13px !important;
-  line-height:1.35 !important;
-}
-
-/* ĐÃ BÁN */
-body.preview-mobile .sold{
-  font-size:11px !important;
-  color:#6b7280 !important;
-}
-
-/* GIÁ – to vừa, không zoom */
-body.preview-mobile .price{
-  font-size:18px !important;
-  font-weight:800 !important;
-  color:#ee4d2d !important;
-  line-height:1.1 !important;
-}
-
-/* giá cũ */
-body.preview-mobile .original-price{
-  font-size:11px !important;
-}
-
-/* % giảm */
-body.preview-mobile .discount-badge{
-  font-size:11px !important;
-  padding:2px 6px !important;
-  border-radius:10px !important;
-}
 
 .footer-note{margin-top:30px;text-align:center;color:#667;font-size:13px;padding-bottom:30px}
